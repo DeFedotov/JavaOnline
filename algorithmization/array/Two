@@ -1,0 +1,33 @@
+package by.epam.java.algorithm.array;
+
+//Одномерные массивы.
+//2.
+//Дана последовательность действительных чисел а1 ,а2 ,..., ап.
+//Заменить все ее члены, большие данного Z, этим числом.
+//Подсчитать количество замен.
+
+import java.util.Scanner;
+
+public class Two {
+
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int[] arr = {1, 12, 3, 24, 5, 16, 7, 28 , 9, 20, 11, 32, 23, 14, 35};
+    int count = 0;
+    System.out.println("Enter z: ");
+    while (scanner.hasNextInt() == false) {
+      scanner.next();
+      System.out.println("Enter z: ");
+    }
+
+    int z = scanner.nextInt();
+
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] > z) {
+        arr[i] = z;
+        count++;
+      }
+    }
+    System.out.println(count);
+  }
+}
