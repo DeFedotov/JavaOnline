@@ -1,10 +1,10 @@
 package by.epam.java.algorithm.array;
 
-//Одномерные массивы.
-//2.
-//Дана последовательность действительных чисел а1 ,а2 ,..., ап.
-//Заменить все ее члены, большие данного Z, этим числом.
-//Подсчитать количество замен.
+//Одномерные массивы
+//2
+//Дана последовательность действительных чисел а1 ,а2 ,..., ап
+//Заменить все ее члены, большие данного Z, этим числом
+//Подсчитать количество замен
 
 import java.util.Scanner;
 
@@ -12,15 +12,16 @@ public class Two {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    int[] arr = {1, 12, 3, 24, 5, 16, 7, 28 , 9, 20, 11, 32, 23, 14, 35};
+    double[] arr = {1.0, 12.2, 3.8, 24.3, 5.0, 16.6, 7.4, 28.1 , 9.9, 20.4, 11.5, 32.2, 23.8, 14.6, 35.4};
     int count = 0;
+
     System.out.println("Enter z: ");
-    while (scanner.hasNextInt() == false) {
+    while (scanner.hasNextDouble() == false) {
       scanner.next();
       System.out.println("Enter z: ");
     }
 
-    int z = scanner.nextInt();
+    double z = scanner.nextDouble();
 
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] > z) {
