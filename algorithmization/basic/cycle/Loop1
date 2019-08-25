@@ -1,0 +1,19 @@
+package by.epam.java.basic;
+
+// Напишите программу, где пользователь вводит любое целое положительное число. 
+//А программа суммирует все числа от 1 до введенного пользователем числа.
+
+import java.util.Scanner;
+
+public class Loop1 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    long n = sc.nextLong();
+    long sum = 0;
+
+    for (int i = 0; i < n; i++) {
+      sum += i;
+    }
+    System.out.println(sum);
+  }
+}
