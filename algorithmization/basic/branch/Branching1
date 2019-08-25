@@ -1,0 +1,28 @@
+package by.epam.java.basic;
+
+// Даны два угла треугольника (в градусах).
+//Определить, существует ли такой треугольник, и если да, то будет ли он прямоугольным.
+
+import java.util.Scanner;
+
+public class Branching1 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    byte a = sc.nextByte();
+    byte b = sc.nextByte();
+    byte c = (byte) (180 - (a + b));
+
+    if (((a + b + c) == 180) && ((a + b) < 180) && ((a + c) < 180) && ((b + c) < 180)) {
+      System.out.println("Triangle exists");
+    } else {
+      System.out.println("Triangle does not exist!");
+    }
+    if (a == 90 && b != 90 && c != 90) {
+      System.out.println("Triangle is right");
+    } else if (b == 90 && a != 90 && c != 90) {
+      System.out.println("Triangle is right");
+    }else if (c == 90 && b != 90 && a != 90) {
+      System.out.println("Triangle is right");
+    }
+  }
+}
