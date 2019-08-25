@@ -1,0 +1,19 @@
+package by.epam.java.basic;
+
+import java.util.Scanner;
+
+public class Task6 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    byte x = sc.nextByte();
+    byte y = sc.nextByte();
+
+    boolean result = (x >= 0 && x <= 2 && y >= 0 && y <= 4) ||
+                    (x >= 0 && x <= 4 && y >= -3 && y <= 0) ||
+                    (x >= -4 && x <= 0 && y >= -3 && y <= 0) ||
+                    (x >= -2 && x <= 0 && y >= 0 && y <= 4);
+    System.out.println(result);
+
+
+  }
+}
