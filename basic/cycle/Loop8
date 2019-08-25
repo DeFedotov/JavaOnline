@@ -1,0 +1,27 @@
+package by.epam.java.basic;
+
+// Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
+
+import java.util.Scanner;
+
+public class Loop8 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int c = b;
+    int d;
+
+    while (a > 0) {
+      d = a % 10;
+      a = a / 10;
+      c = b;
+      while (c > 0) {
+        if (c % 10 == d) {
+          System.out.print(d + ",");
+        }
+        c = c / 10;
+      }
+    }
+  }
+}
