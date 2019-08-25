@@ -1,0 +1,23 @@
+package by.epam.java.basic;
+
+// Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях). 
+// Поменять местами дробную и целую части числа и вывести полученное значение числа.
+
+import java.util.Scanner;
+
+public class Task4 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    double a = sc.nextDouble() * 1000;
+    int b = (int) a;
+    int n = b / 1000;
+    int d = b % 1000;
+    int c = d *1000 + n;
+    double r = (double) c / 1000;
+    System.out.println(r);
+
+        // problem with 000
+        // result 111.0 not 111.ooo
+  }
+}
