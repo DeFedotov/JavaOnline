@@ -1,0 +1,20 @@
+package by.epam.java.basic;
+
+//Дано натуральное число Т, которое представляет длительность прошедшего времени в секундах. 
+//Вывести данное значение длительности в часах, минутах и секундах в следующей форме: ННч ММмин SSc.
+
+import java.util.Scanner;
+
+public class Task5 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int t = sc.nextInt();
+    int h = t/3600;
+    int m = (t % 3600) / 60;
+    int s = (t % 3600) % 60;
+
+    System.out.format(h + "ч" + " " + m + "мин" +   " " + s + "с");
+  }
+}
+  //problem with 00
+  //(1ч 1мин 1с not 01ч 01мин 01с)
