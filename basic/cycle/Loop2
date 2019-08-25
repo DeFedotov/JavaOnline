@@ -1,0 +1,27 @@
+package by.epam.java.basic;
+
+// Вычислить значения функции на отрезке [а,b] c шагом h:
+
+import java.util.Scanner;
+
+public class Loop2 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int h = sc.nextInt();
+
+    for (int x = a; x <= b; x++) {
+      if (x % h == 0) {
+        if (x > 2) {
+          int y = x;
+          System.out.print(y + " ");
+        } else if (x <= 2) {
+          int y = -x;
+          System.out.print(y + " ");
+        }
+      }
+    }
+  }
+}
